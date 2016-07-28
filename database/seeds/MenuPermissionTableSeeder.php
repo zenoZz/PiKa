@@ -57,21 +57,21 @@ class MenuPermissionTableSeeder extends Seeder
                     'permission_id' => 42,
                     'menu_id'       => 7,
                 ],
-            8  =>
-                [
-                    'permission_id' => 40,
-                    'menu_id'       => 8,
-                ],
-            9  =>
-                [
-                    'permission_id' => 40,
-                    'menu_id'       => 9,
-                ],
-            10 =>
-                [
-                    'permission_id' => 40,
-                    'menu_id'       => 10,
-                ],
+//            8  =>
+//                [
+//                    'permission_id' => 40,
+//                    'menu_id'       => 8,
+//                ],
+//            9  =>
+//                [
+//                    'permission_id' => 40,
+//                    'menu_id'       => 9,
+//                ],
+//            10 =>
+//                [
+//                    'permission_id' => 40,
+//                    'menu_id'       => 10,
+//                ],
             11 =>
                 [
                     'permission_id' => 40,
@@ -216,6 +216,36 @@ class MenuPermissionTableSeeder extends Seeder
                 [
                     'permission_id' => 43,
                     'menu_id'       => 54,
+                ],
+            42 =>
+                [
+                    'permission_id' => 40,
+                    'menu_id'       => 57,
+                ],
+            43 =>
+                [
+                    'permission_id' => 40,
+                    'menu_id'       => 58,
+                ],
+            44 =>
+                [
+                    'permission_id' => 40,
+                    'menu_id'       => 59,
+                ],
+            45 =>
+                [
+                    'permission_id' => 40,
+                    'menu_id'       => 60,
+                ],
+            46 =>
+                [
+                    'permission_id' => 40,
+                    'menu_id'       => 61,
+                ],
+            47 =>
+                [
+                    'permission_id' => 40,
+                    'menu_id'       => 62,
                 ],
         ]);
 

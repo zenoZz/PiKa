@@ -56,7 +56,6 @@
                 </div>
             </div><!-- /.box-body -->
         </div>
-
     </section><!-- /.content -->
 @endsection
 @section("after.js")
