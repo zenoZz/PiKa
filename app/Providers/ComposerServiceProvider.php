@@ -7,7 +7,7 @@ use App\Models\Tag;
 
 class ComposerServiceProvider extends ServiceProvider
 {
-    private $main, $menu, $userInfo, $role, $permission;
+    private $main, $menu, $userInfo, $tagCloud, $permission;
 
     public function __construct()
     {
@@ -20,6 +20,10 @@ class ComposerServiceProvider extends ServiceProvider
             'admin.sidebar',
             'admin.header',
             'admin.user.personalEdit'
+        ];
+
+        $this->tagCloud = [
+            'layouts.tag-cloud'
         ];
     }
 
@@ -35,7 +39,7 @@ class ComposerServiceProvider extends ServiceProvider
             $view->with(compact('_user'));
         });
 
-        view()->composer('*',function($view){
+        view()->composer($this->tagCloud, function($view){
             $view->with('_tags',Tag::lists('title', 'mark')->toArray());
         });
 

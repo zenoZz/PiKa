@@ -18,10 +18,7 @@
                 <div class="widget">
                     <h4 class="title">标签云</h4>
                     <div class="content tag-cloud">
-                        @foreach($_tags as $mark=> $title)
-                            <a href="/post/by-tag/{{ $mark }}">{{ $title }}</a>
-                        @endforeach
-                        <a href="javascript:void (0)">...</a>
+                        @include('layouts.tag-cloud')
                     </div>
                 </div>
             </div>

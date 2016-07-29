@@ -17,8 +17,7 @@
                     </div><!-- /.box-body -->
                     <div class="box-footer">
                         <div class="form-group">
-                            <label class="col-sm-2 control-label"></label>
-                            <div class="col-sm-7">
+                            <div class="col-sm-12">
                                 <button type="submit" class="btn btn-info btn-flat">提交</button>
                             </div>
                         </div>

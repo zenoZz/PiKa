@@ -67,7 +67,6 @@ class PermissionController extends Controller
                 break;
         }
 
-
         return view('admin.permission.' . $permission->type, compact('has_active', 'id', 'menus'));
     }
 

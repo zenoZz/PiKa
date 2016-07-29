@@ -35,7 +35,6 @@
                     <p><a href="http://laravelacademy.org/" target="_blank" class="btn btn-default btn-block">laravel学院</a></p>
                 </div>
             </div>
-
         </div>
     </div>
 
@@ -43,10 +42,7 @@
     <div class="widget">
         <h4 class="title">标签云</h4>
         <div class="content tag-cloud">
-            @foreach($_tags as $mark=> $title)
-                <a href="{{ route('article-by-tag', ['tag' => $mark]) }}">{{ $title }}</a>
-            @endforeach
-            <a href="javascript:void (0)">...</a>
+            @include('layouts.tag-cloud')
         </div>
     </div>
 </aside><!--end main right-->
