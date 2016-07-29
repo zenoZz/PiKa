@@ -38,37 +38,14 @@
 
         </div>
     </div>
-    <!-- end widget -->
-    {{--<div class="widget">--}}
-        {{--<h4 class="title">微信扫描</h4>--}}
-        {{--<div class="content download">--}}
-            {{--<img src="{{ asset("/lib/img/weixinGZH.jpg") }}" style="width:100%;height:100%">--}}
-        {{--</div>--}}
-    {{--</div>--}}
 
     <!-- start tag cloud widget -->
     <div class="widget">
         <h4 class="title">标签云</h4>
         <div class="content tag-cloud">
             @foreach($_tags as $mark=> $title)
-                <a href="/post/by-tag/{{ $mark }}">{{ $title }}</a>
+                <a href="{{ route('article-by-tag', ['tag' => $mark]) }}">{{ $title }}</a>
             @endforeach
-
-            {{--<a href="javascript:void (0)">Laravel入门教程</a>--}}
-            {{--<a href="javascript:void (0)">艾欧尼亚</a>--}}
-            {{--<a href="javascript:void (0)">laravle5</a>--}}
-            {{--<a href="javascript:void (0)">Laravel 5.1</a>--}}
-            {{--<a href="javascript:void (0)">ORM</a>--}}
-            {{--<a href="javascript:void (0)">诺克萨斯</a>--}}
-            {{--<a href="javascript:void (0)">LTS</a>--}}
-            {{--<a href="javascript:void (0)">PHP</a>--}}
-            {{--<a href="javascript:void (0)">Composer</a>--}}
-            {{--<a href="javascript:void (0)">微框架</a>--}}
-            {{--<a href="javascript:void (0)">Lumen</a>--}}
-            {{--<a href="javascript:void (0)">命名空间</a>--}}
-            {{--<a href="javascript:void (0)">Laravel4</a>--}}
-
-
             <a href="javascript:void (0)">...</a>
         </div>
     </div>
