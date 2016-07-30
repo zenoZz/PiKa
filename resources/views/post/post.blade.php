@@ -7,18 +7,11 @@
     <title>BlogByLaravel</title>
     <meta name="description" content="Laravel是一套简洁、优雅的PHP Web开发框架(PHP Web Framework) -- Laravel中文网" />
     <meta name="keywords" content="Laravel中文社区,php框架,laravel中文网,php framework,restful routing,laravel,laravel php">
-    <!-- Bootstrap -->
     <link href="{{ asset("/AdminLTE/bootstrap/css/bootstrap.min.css") }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset("/lib/css/index.css") }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset("/pika/css/index.css") }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset("/favicon.ico") }}" rel="Shortcut Icon">
-    <link href="{{ asset("/lib/css/pagination.css") }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset("/pika/css/pagination.css") }}" rel="stylesheet" type="text/css" />
     <script src="{{ asset ("/AdminLTE/plugins/jQuery/jQuery-2.2.3.min.js") }}"></script>
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
     <style>
         a,a:hover{ text-decoration:none; color:#000000}
         ul li{
@@ -34,8 +27,7 @@
         }
     </style>
 </head>
-<body style="background-image: url('{{ asset ("/lib/img/1.jpg") }}')">
-
+<body style="background-image: url('{{ asset ("/pika/img/1.jpg") }}')">
 <!--header start-->
 <header class="container-fluid" style="margin-bottom: 0;padding-top: 10px;padding-bottom: 50px;">
     <div class="row">
@@ -49,21 +41,17 @@
     </div>
 </header>
 <!--header end-->
-
 <!-- start navigation -->
 @include('post.header')
 <!-- end navigation -->
-
 <!--评论提示-->
 @include('layouts.post_topInfo')
-
 <!--main content-->
 <section class="content-wrap">
     <div class="container">
         <div class="row" >
             <main class="col-md-8 main-content">
                 @yield('content')
-
             </main>
             <!--main right-->
             @include('post.rightMenu')
@@ -72,7 +60,6 @@
 </section>
 <!--end main content-->
 @include('post.footer')
-
 <div class="copyright">
     <div class="container">
         <div class="row">
@@ -84,8 +71,6 @@
         </div>
     </div>
 </div>
-
-
 <script src="{{ asset ("/AdminLTE/bootstrap/js/bootstrap.min.js") }}" type="text/javascript"></script>
 <!--<script src="public/js/index.js"></script>-->
 <script>
