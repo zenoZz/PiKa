@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>admin</title>
-    <link href="{{ asset("/AdminLTE/bootstrap/css/bootstrap.min.css") }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset("/AdminLTE/lib/font-awesome/4.3.0/css/font-awesome.min.css") }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset("/AdminLTE/lib/ionicons/2.0.1/css/ionicons.min.css") }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset("/AdminLTE/dist/css/AdminLTE.min.css")}}" rel="stylesheet" type="text/css" />
-    <script src="{{ asset ("/AdminLTE/plugins/jQuery/jQuery-2.2.3.min.js") }}"></script>
+    <link href="{{ asset("/pika/css/bootstrap.min.css") }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset("/pika/lib/font-awesome/4.3.0/css/font-awesome.min.css") }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset("/pika/lib/ionicons/2.0.1/css/ionicons.min.css") }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset("/pika/css/AdminLTE.min.css")}}" rel="stylesheet" type="text/css" />
+    <script src="{{ asset ("/pika/js/jQuery-2.2.3.min.js") }}"></script>
 </head>
 <body class="login-page">
 @include('layouts.topInfo')
@@ -30,12 +30,19 @@
                 <span class="glyphicon glyphicon-lock form-control-feedback"></span>
             </div>
             <div class="row">
+                <div class="col-xs-8">
+                    {{--<div class="checkbox icheck">--}}
+                        {{--<label>--}}
+                            {{--<input type="checkbox"> Remember Me--}}
+                        {{--</label>--}}
+                    {{--</div>--}}
+                </div>
                 <div class="col-xs-4">
                     <button type="submit" class="btn btn-primary btn-block btn-flat">登录</button>
                 </div><!-- /.col -->
             </div>
         </form>
-        <a href="javascript:void (0)">忘记密码?</a><br>
+        {{--<a href="javascript:void (0)">忘记密码?</a><br>--}}
     </div><!-- /.login-box-body -->
 </div><!-- /.login-box -->
 </body>
