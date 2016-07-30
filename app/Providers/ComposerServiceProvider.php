@@ -12,13 +12,13 @@ class ComposerServiceProvider extends ServiceProvider
     public function __construct()
     {
         $this->main = [
-            'admin.sidebar',
-            'admin.breadcrumbs',
+            'admin.layout.sidebar',
+            'admin.layout.breadcrumbs',
         ];
 
         $this->userInfo = [
-            'admin.sidebar',
-            'admin.header',
+            'admin.layout.sidebar',
+            'admin.layout.header',
             'admin.user.personalEdit'
         ];
 

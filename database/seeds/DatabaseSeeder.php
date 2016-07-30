@@ -21,7 +21,6 @@ class DatabaseSeeder extends Seeder
         $this->call(RoleUserTableSeeder::class);
         $this->call(MenuPermissionTableSeeder::class);
         $this->call(PermissionRoleTableSeeder::class);
-        $this->call(ActionPermissionTableSeeder::class);
 
         Model::reguard();
     }

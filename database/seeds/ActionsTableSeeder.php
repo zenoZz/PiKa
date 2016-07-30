@@ -270,50 +270,6 @@ class ActionsTableSeeder extends Seeder
                 'created_at' => '2016-06-24 17:29:19',
                 'updated_at' => '2016-06-24 17:29:19',
             ),
-            23 => 
-            array (
-                'id' => 37,
-                'group' => 'log',
-                'name' => '删除日志',
-                'action' => 'Arcanedev\\LogViewer\\Http\\Controllers\\LogViewerController@delete',
-                'description' => '删除日志',
-                'state' => 1,
-                'created_at' => '2016-06-24 17:29:30',
-                'updated_at' => '2016-06-24 17:29:30',
-            ),
-            24 => 
-            array (
-                'id' => 38,
-                'group' => 'menu',
-                'name' => '显示日志',
-                'action' => 'Arcanedev\\LogViewer\\Http\\Controllers\\LogViewerController@show',
-                'description' => '显示日志',
-                'state' => 1,
-                'created_at' => '2016-06-24 17:29:40',
-                'updated_at' => '2016-06-24 17:29:40',
-            ),
-            25 => 
-            array (
-                'id' => 39,
-                'group' => 'menu',
-                'name' => '下载日志',
-                'action' => 'Arcanedev\\LogViewer\\Http\\Controllers\\LogViewerController@download',
-                'description' => '下载日志',
-                'state' => 1,
-                'created_at' => '2016-06-24 17:29:47',
-                'updated_at' => '2016-06-24 17:29:47',
-            ),
-            26 => 
-            array (
-                'id' => 40,
-                'group' => 'menu',
-                'name' => '日志等级',
-                'action' => 'Arcanedev\\LogViewer\\Http\\Controllers\\LogViewerController@showByLevel',
-                'description' => '日志等级',
-                'state' => 1,
-                'created_at' => '2016-06-24 17:30:07',
-                'updated_at' => '2016-06-24 17:30:07',
-            ),
         ));
 
 

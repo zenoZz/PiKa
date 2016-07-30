@@ -18,17 +18,17 @@
 @include('layouts.topInfo')
 <div class="wrapper">
     @inject('viewService','App\Services\ViewService')
-    @include('admin.header')
-    @include('admin.sidebar')
+    @include('admin.layout.header')
+    @include('admin.layout.sidebar')
     <div class="content-wrapper">
         <section class="content-header">
-            @include('admin.breadcrumbs')
+            @include('admin.layout.breadcrumbs')
         </section>
         <section class="content">
             @yield('content')
         </section>
     </div>
-    @include('admin.footer')
+    @include('admin.layout.footer')
 </div><!-- ./wrapper -->
 <script src="{{ asset ("/AdminLTE/bootstrap/js/bootstrap.min.js") }}" type="text/javascript"></script>
 <script src="{{ asset ("/AdminLTE/plugins/select2/select2.full.min.js") }}"></script>

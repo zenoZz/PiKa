@@ -53,7 +53,7 @@
                 {{--</li>--}}
                 <!-- /.messages-menu -->
                 <!-- User Account Menu -->
-                @include('admin.authuser')
+                @include('admin.layout.authuser')
             </ul>
         </div>
     </nav>
