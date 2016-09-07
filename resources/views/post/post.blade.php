@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>BlogByLaravel</title>
-    <meta name="description" content="Laravel是一套简洁、优雅的PHP Web开发框架(PHP Web Framework) -- Laravel中文网" />
-    <meta name="keywords" content="Laravel中文社区,php框架,laravel中文网,php framework,restful routing,laravel,laravel php">
+    <title>Laravel Blog</title>
+    <meta name="description" content="Laravel blog" />
+    <meta name="keywords" content="laravel blog,laravel,laravel php">
     <link href="{{ asset("/pika/css/bootstrap.min.css") }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset("/pika/css/index.css") }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset("/favicon.ico") }}" rel="Shortcut Icon">
@@ -34,7 +34,7 @@
         <!--标头-->
         <div class="col-sm-12 text-center">
 
-            <h1 style="color: #ffffff"><span class="hide">Laravel - </span>BlogByLaravel <a href="###"><small style="font-size:0.5em;color: #ffffff">--zeno</small></a></h1>
+            <h1 style="color: #ffffff"><span class="hide">Laravel - </span>Laravel Blog <a href="###"><small style="font-size:0.5em;color: #ffffff">--zeno</small></a></h1>
         </div>
         <div class="col-sm-12" style="text-align: center">
         </div>
