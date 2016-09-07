@@ -11,7 +11,7 @@
 <link href="{{ asset("/pika/css/AdminLTE.min.css")}}" rel="stylesheet" type="text/css" />
 <link href="{{ asset("/pika/css/skins/skin-blue.min.css")}}" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" type="text/css" href="{{ asset("/pika/css/form_v.css") }}">
-<script src="{{ asset ("/pika/js/jQuery-2.2.3.min.js") }}"></script>
+<script src="{{ asset ("/pika/js/jquery-2.2.3.min.js") }}"></script>
 @yield('after.css')
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
