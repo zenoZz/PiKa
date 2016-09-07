@@ -7,11 +7,11 @@
     <title>BlogByLaravel</title>
     <meta name="description" content="Laravel是一套简洁、优雅的PHP Web开发框架(PHP Web Framework) -- Laravel中文网" />
     <meta name="keywords" content="Laravel中文社区,php框架,laravel中文网,php framework,restful routing,laravel,laravel php">
-    <link href="{{ asset("/AdminLTE/bootstrap/css/bootstrap.min.css") }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset("/pika/css/bootstrap.min.css") }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset("/pika/css/index.css") }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset("/favicon.ico") }}" rel="Shortcut Icon">
     <link href="{{ asset("/pika/css/pagination.css") }}" rel="stylesheet" type="text/css" />
-    <script src="{{ asset ("/AdminLTE/plugins/jQuery/jQuery-2.2.3.min.js") }}"></script>
+    <script src="{{ asset ("/pika/js/jquery-2.2.3.min.js") }}"></script>
     <style>
         a,a:hover{ text-decoration:none; color:#000000}
         ul li{
@@ -71,7 +71,7 @@
         </div>
     </div>
 </div>
-<script src="{{ asset ("/AdminLTE/bootstrap/js/bootstrap.min.js") }}" type="text/javascript"></script>
+<script src="{{ asset ("/pika/js/bootstrap.min.js") }}" type="text/javascript"></script>
 <!--<script src="public/js/index.js"></script>-->
 <script>
     $(function(){
