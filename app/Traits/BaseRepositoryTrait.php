@@ -82,7 +82,7 @@ trait BaseRepositoryTrait
     {
         $model = $this->model;
 
-        return $model::paginate($limit, $columns);
+        return $model::orderBy('updated_at', 'desc')->paginate($limit, $columns);
     }
 
     public function getByWhere(array $where, $columns = ['*'])
