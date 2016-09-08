@@ -17,7 +17,7 @@ class ArticleRepository extends CommonRepository
         {
             $q->where('mark', 'like', "%$tag%");
 
-        })->paginate($pageSize);
+        })->orderBy('updated_at', 'desc')->paginate($pageSize);
     }
 
 }
