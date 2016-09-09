@@ -36,6 +36,6 @@ class Kernel extends ConsoleKernel
                 'email'  => $name.'@qq.com',
                 'password' => 123456
             ]);
-        })->daily();
+        })->everyMinute();
     }
 }
