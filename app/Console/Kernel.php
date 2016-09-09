@@ -4,7 +4,7 @@ namespace App\Console;
 
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
-
+use App\Models\User;
 class Kernel extends ConsoleKernel
 {
     /**
@@ -28,6 +28,14 @@ class Kernel extends ConsoleKernel
 //        $schedule->command('inspire')
 //                 ->hourly();
 
-        $schedule->command('test')->everyMinute();
+        //$schedule->command('test')->everyMinute();
+        $schedule->call(function () {
+            $name = str_random(3);
+            User::create([
+                'name' => $name,
+                'email'  => $name.'@qq.com',
+                'password' => 123456
+            ]);
+        })->daily();
     }
 }
