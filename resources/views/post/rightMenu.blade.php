@@ -3,7 +3,7 @@
     <div class="widget">
         <h4 class="title">社区</h4>
         <div class="content community">
-            <p><a href="https://github.com/zenoZz" target="_blank" style="color: #f4645f"><span class="fa fa-github"></span>GitHub</a></p>
+            <p><a href="https://github.com/zenoZz" target="_blank" style="color: #f4645f"><i class="fa fa-fw fa-github"></i>GitHub</a></p>
             <p><a href="javascript:void (0)">QQ群：527278156</a></p>
             <p><a href="javascript:void (0)" style="color: #f4645f"><span class="glyphicon glyphicon-globe"></span> 交流社区</a></p>
         </div>
