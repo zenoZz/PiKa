@@ -12,7 +12,7 @@ class ViewService
     {
         $user = Auth::user();
         if ( ! $user) {
-            return redirect()->to('/auth/logout');
+            return redirect()->to('/admin/login');
         }
 
         $routes = UserRepository::getUserMenusPermissionsByUserModel($user);

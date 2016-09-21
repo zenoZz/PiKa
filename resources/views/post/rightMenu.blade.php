@@ -27,4 +27,11 @@
             @include('layouts.tag-cloud')
         </div>
     </div>
+
+    <div class="widget">
+        <h4 class="title">打赏</h4>
+        <div class="content community">
+            <p><img src="{{ asset ("/pika/img/payme.jpg") }}" alt=""></p>
+        </div>
+    </div>
 </aside><!--end main right-->
