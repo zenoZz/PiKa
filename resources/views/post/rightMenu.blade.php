@@ -30,7 +30,7 @@
 
     <div class="widget">
         <h4 class="title">打赏</h4>
-        <div class="content community">
+        <div class="content community text-center">
             <p><img src="{{ asset ("/pika/img/payme.jpg") }}" alt=""></p>
         </div>
     </div>
