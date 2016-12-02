@@ -9,7 +9,7 @@
     <link href="{{ asset("/pika/lib/font-awesome/4.3.0/css/font-awesome.min.css") }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset("/pika/lib/ionicons/2.0.1/css/ionicons.min.css") }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset("/pika/css/AdminLTE.min.css")}}" rel="stylesheet" type="text/css" />
-    <script src="{{ asset ("/pika/js/jQuery-2.2.3.min.js") }}"></script>
+    <script src="{{ asset ("/pika/js/jquery-2.2.3.min.js") }}"></script>
     <script src="{{ asset ("/pika/js/form-submit-sync.js") }}"></script>
     <script src="{{ asset ("/pika/lib/layer/layer.js") }}"></script>
 </head>
