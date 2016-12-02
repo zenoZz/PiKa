@@ -10,6 +10,8 @@
     <link href="{{ asset("/pika/lib/ionicons/2.0.1/css/ionicons.min.css") }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset("/pika/css/AdminLTE.min.css")}}" rel="stylesheet" type="text/css" />
     <script src="{{ asset ("/pika/js/jQuery-2.2.3.min.js") }}"></script>
+    <script src="{{ asset ("/pika/js/form-submit-sync.js") }}"></script>
+    <script src="{{ asset ("/pika/lib/layer/layer.js") }}"></script>
 </head>
 <body class="login-page">
 @include('layouts.topInfo')
@@ -19,7 +21,7 @@
     </div><!-- /.login-logo -->
     <div class="login-box-body">
         <p class="login-box-msg">后台管理系统</p>
-        <form action="{{ route('login.post') }}" method="post" class="cmxform" id="form">
+        <form action="{{ route('login.post') }}" method="post" class="cmxform">
             {!! csrf_field() !!}
             <div class="form-group has-feedback">
                 <input type="email" class="form-control" name="email" placeholder="Email" required title="请输入登录邮箱" value="{{ old('email') }}"/>
@@ -38,7 +40,7 @@
                     {{--</div>--}}
                 </div>
                 <div class="col-xs-4">
-                    <button type="submit" class="btn btn-primary btn-block btn-flat">登录</button>
+                    <button type="button" class="btn btn-primary btn-block btn-flat submit-form-sync">登录</button>
                 </div><!-- /.col -->
             </div>
         </form>

@@ -5,8 +5,10 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Facades\TagRepository;
 use App\Http\Controllers\Controller;
+use App\Traits\ValidationTrait;
 class TagController extends Controller
 {
+    use ValidationTrait;
     public function index()
     {
         $data = TagRepository::paginate(config('repository.page-limit'));
@@ -21,6 +23,13 @@ class TagController extends Controller
 
     public function store(Request $request)
     {
+        $validator = $this->verify($request, 'tag.store');
+        if ($validator->fails())
+        {
+            $messages = $validator->messages()->toArray();
+            return responseWrong($messages);
+        }
+
         TagRepository::create($request->all());
 
         return responseSuccess('', route('tag.index'));

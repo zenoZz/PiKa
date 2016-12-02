@@ -34,6 +34,7 @@
 <script src="{{ asset ("/pika/js/select2.full.min.js") }}"></script>
 <script src="{{ asset ("/pika/js/app.min.js") }}" type="text/javascript"></script>
 <script src="{{ asset ("/pika/js/jquery.validate.min.js" ) }}"></script>
+<script src="{{ asset ("/pika/lib/layer/layer.js" ) }}"></script>
 <script src="{{ asset ("/pika/js/form_v.js" ) }}"></script>
 @yield('after.js')
 </body>

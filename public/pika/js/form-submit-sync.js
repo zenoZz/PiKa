@@ -1,10 +1,4 @@
-/**
- * Created by Administrator on 2016/7/20.
- */
 $(function(){
-    $("#form").validate();
-    $(".select2").select2();
-
     //表单ajax提交
     $('#submitFormSync').click(function(){
         var btn = $(this);
@@ -117,4 +111,4 @@ $(function(){
             });
         }
     })
-});
+})

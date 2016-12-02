@@ -30,9 +30,9 @@ class AuthController extends Controller
     {
         if (Auth::attempt(['email' => $request->email, 'password' => $request->password], true))
         {
-            return responseSuccess('', 'admin');
+            return responseSuccess('', '', route('admin.index'));
         }
-        return responseFail('邮箱或密码错误');
+        return responseWrong('邮箱或密码错误');
     }
 
     /**
