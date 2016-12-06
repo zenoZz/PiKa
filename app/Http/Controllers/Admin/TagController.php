@@ -32,7 +32,7 @@ class TagController extends Controller
 
         TagRepository::create($request->all());
 
-        return responseSuccess('', route('tag.index'));
+        return responseSuccess('','', route('tag.index'));
     }
 
     public function edit($id)
@@ -44,6 +44,13 @@ class TagController extends Controller
 
     public function update(Request $request, $id)
     {
+        $validator = $this->verify($request, 'tag.store');
+        if ($validator->fails())
+        {
+            $messages = $validator->messages()->toArray();
+            return responseWrong($messages);
+        }
+
         TagRepository::updateById($id, $request->all());
 
         return responseSuccess('', route('tag.index'));

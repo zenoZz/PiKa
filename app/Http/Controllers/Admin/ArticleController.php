@@ -6,8 +6,10 @@ use App\Facades\ArticleRepository;
 use App\Facades\TagRepository;
 use Auth;
 use EndaEditor;
+use App\Traits\ValidationTrait;
 class ArticleController extends BaseController{
 
+    use ValidationTrait;
     /**
      * @param Request $request
      * @return \Illuminate\view\view
@@ -46,6 +48,12 @@ class ArticleController extends BaseController{
      */
     public function store(Request $request)
     {
+        $validator = $this->verify($request, 'article.store');
+        if ($validator->fails())
+        {
+            $messages = $validator->messages()->toArray();
+            return responseWrong($messages);
+        }
 
         $data = $request->all();
         $data['author'] = $this->_user->name;
@@ -77,7 +85,7 @@ class ArticleController extends BaseController{
         //添加标签
         $article->tags()->sync($request->get('tags'));
 
-        return responseSuccess('res.article.create_article_success', route('article.index'));
+        return responseSuccess('', 'res.article.create_article_success', route('article.index'));
     }
 
     /**
