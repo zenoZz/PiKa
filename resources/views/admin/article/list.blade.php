@@ -11,7 +11,7 @@
                         <tr class="row">
                             <th class="col-lg-1">ID</th>
                             <th>标题</th>
-                            <th class="col-lg-3">标签</th>
+                            <th class="col-lg-2">标签</th>
                             <th class="col-lg-1">上线状态</th>
                             <th class="col-lg-1">作者</th>
                             <th class="col-lg-2">最后更新时间</th>
@@ -26,7 +26,7 @@
                             <td>
                                 <a href="{{ route('post.show', ['id' => $article->getKey()]) }}" target="_blank">{{ $article->title }}</a>
                             </td>
-                            <td class="col-lg-4">
+                            <td class="col-lg-2">
                                 @foreach($article->tags as $tag) {{ $tag->title }}&nbsp;@endforeach
                             </td>
                             <td class="col-lg-1">
