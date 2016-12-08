@@ -1,5 +1,6 @@
 <?php namespace App\Http\Controllers;
 
+use App\Models\Article;
 use Illuminate\Http\Request;
 use App\Facades\ArticleRepository;
 use App\Facades\CommentRepository;
@@ -8,10 +9,17 @@ use App\Http\Requests\Comment\CreateRequest;
 class PostController extends Controller {
 
 
-    public function index()
+    public function index(Request $request)
     {
-        $articles = ArticleRepository::paginate(5);
-        return view('post.index', compact('articles'));
+        $title = '';
+        $mod = new Article();
+        if ($request->has('title'))
+        {
+            $title = $request->get('title');
+            $mod = $mod->where('title', 'LIKE', "%$title%");
+        }
+        $articles = $mod->paginate(5);
+        return view('post.index', compact('articles', 'title'));
     }
 
     /**
