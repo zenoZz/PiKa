@@ -85,7 +85,7 @@ class ArticleController extends BaseController{
         //添加标签
         $article->tags()->sync($request->get('tags'));
 
-        return responseSuccess('', 'res.article.create_article_success', route('article.index'));
+        return responseSuccess('', '成功', route('article.index'));
     }
 
     /**
@@ -129,7 +129,7 @@ class ArticleController extends BaseController{
 
         $article->tags()->attach($request->get('tags'));
 
-        return responseSuccess('', 'res.update_success', route('article.index'));
+        return responseSuccess('', '编辑成功', route('article.index'));
     }
 
     public function updateMarkdown(Request $request,$id)
@@ -149,6 +149,19 @@ class ArticleController extends BaseController{
         return responseSuccess('', 'res.update_success', route('article.index'));
     }
 
+    public function check($id, $status)
+    {
+        if (!in_array($status, array_keys(Article::$IS_ONLINE)))
+            return responseF('审核状态参数不对请刷新页面重试');
+
+        $mod = Article::findOrFail($id);
+        $mod->update([
+            'on_line' => $status
+        ]);
+
+        return responseS();
+    }
+
     /**
      * Remove the specified resource from storage.
      *
@@ -159,7 +172,7 @@ class ArticleController extends BaseController{
     {
         ArticleRepository::destroy($id);
 
-        return responseSuccess();
+        return responseS();
     }
 
 }

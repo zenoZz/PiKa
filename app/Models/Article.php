@@ -8,7 +8,16 @@ class Article extends Model
 {
     //
 
-    protected $fillable = ['content', 'article_type', 'title', 'author', 'user_id', 'is_recommend', 'markdown_source', 'is_markdown'];
+    protected $fillable = ['content',
+        'article_type',
+        'title',
+        'author',
+        'user_id',
+        'is_recommend',
+        'markdown_source',
+        'is_markdown',
+        'on_line'
+    ];
 
 
     /**
@@ -38,6 +47,19 @@ class Article extends Model
     public static $ARTICLE_IS_MARKDOWN = [
         self::ARTICLE_IS_MARKDOWN_YES     => '是',
         self::ARTICLE_IS_MARKDOWN_NO      => '否',
+    ];
+
+    const ARTICLE_IS_ONLINE_NO = 1;
+    const ARTICLE_IS_ONLINE_YES = 2;
+
+    public static $IS_ONLINE = [
+        self::ARTICLE_IS_ONLINE_NO => '已下线',
+        self::ARTICLE_IS_ONLINE_YES => '已上线',
+    ];
+
+    public static $IS_ONLINE_HTML = [
+        self::ARTICLE_IS_ONLINE_NO => '<span style="color: red"><b>已下线</b></span>',
+        self::ARTICLE_IS_ONLINE_YES => '<span style="color: green"><b>已上线</b></span>'
     ];
 
 

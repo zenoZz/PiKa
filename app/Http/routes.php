@@ -43,6 +43,7 @@ Route::group(['namespace' => 'Admin','middleware' => ['auth', 'authorize']], fun
     Route::get('article/markdown', ['as' => 'article.create.markdown', 'uses' => 'ArticleController@getMarkdown']);
     Route::post('article/markdown', ['as' => 'article.store.markdown', 'uses' => 'ArticleController@postMarkdown']);
     Route::put('article/markdown', ['as' => 'article.update.markdown', 'uses' => 'ArticleController@updateMarkdown']);
+    Route::get('article/check/{id}/{status}', ['as' => 'article.check', 'uses' => 'ArticleController@check']);
     Route::resource("article", 'ArticleController');
     Route::resource("tag", 'TagController');
 });

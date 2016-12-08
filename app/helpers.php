@@ -6,11 +6,11 @@
 // * @param string $route
 // * @return \Illuminate\Http\RedirectResponse
 // */
-//function responseSuccess($msg = '', $route = '')
-//{
-//    $msg = trans($msg)?trans($msg):trans('res.success');
-//    return $route?redirect($route)->with('msg_ok', $msg):redirect()->back()->with('msg_ok', $msg);
-//}
+function responseS($msg = '', $route = '')
+{
+    $msg = trans($msg)?trans($msg):trans('res.success');
+    return $route?redirect($route)->with('msg_ok', $msg):redirect()->back()->with('msg_ok', $msg);
+}
 //
 //
 //
@@ -20,7 +20,7 @@
 // * @param string $route
 // * @return \Illuminate\Http\RedirectResponse
 // */
-function responseFail($msg = '', $route = '')
+function responseF($msg = '', $route = '')
 {
     $msg = trans($msg)?trans($msg):trans('res.fail');
     return $route?redirect($route)->with('msg_no', $msg):redirect()->back()->with('msg_no', $msg);

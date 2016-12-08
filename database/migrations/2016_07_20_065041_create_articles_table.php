@@ -22,6 +22,9 @@ class CreateArticlesTable extends Migration
             $table->integer('user_id');
             $table->integer('is_markdown');
             $table->integer('is_recommend');
+
+            $table->tinyInteger('on_line')->default(1)->comment('1下线 2上线');
+
             $table->timestamps();
         });
 
