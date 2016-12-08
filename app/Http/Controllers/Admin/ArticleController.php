@@ -63,7 +63,7 @@ class ArticleController extends BaseController{
         //添加标签
         $article->tags()->sync($request->get('tags'));
 
-        return responseSuccess('res.article.create_article_success', route('article.index'));
+        return responseSuccess('', 'res.article.create_article_success', route('article.index'));
     }
 
     /**
@@ -129,7 +129,7 @@ class ArticleController extends BaseController{
 
         $article->tags()->attach($request->get('tags'));
 
-        return responseSuccess('res.update_success', route('article.index'));
+        return responseSuccess('', 'res.update_success', route('article.index'));
     }
 
     public function updateMarkdown(Request $request,$id)
@@ -146,7 +146,7 @@ class ArticleController extends BaseController{
 
         $article->tags()->attach($request->get('tags'));
 
-        return responseSuccess('res.update_success', route('article.index'));
+        return responseSuccess('', 'res.update_success', route('article.index'));
     }
 
     /**

@@ -12,7 +12,7 @@
             {{--</form>--}}
             <form class="navbar-form" role="search" action="{{ route('post.index') }}" method="get">
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="" name="title" value="{{ $title }}">
+                    <input type="text" class="form-control" placeholder="" name="title" value="">
                 </div>
                 <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
             </form>
