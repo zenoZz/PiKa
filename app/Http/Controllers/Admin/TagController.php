@@ -53,7 +53,7 @@ class TagController extends Controller
 
         TagRepository::updateById($id, $request->all());
 
-        return responseSuccess('', route('tag.index'));
+        return responseSuccess('','', route('tag.index'));
     }
 
     public function getDelete($id)

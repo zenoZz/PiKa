@@ -29,17 +29,7 @@
 </head>
 <body style="background-image: url('{{ asset ("/pika/img/1.jpg") }}')">
 <!--header start-->
-<header class="container-fluid" style="margin-bottom: 0;padding-top: 10px;padding-bottom: 50px;">
-    <div class="row">
-        <!--标头-->
-        <div class="col-sm-12 text-center">
-
-            <h1 style="color: #ffffff"><span class="hide">Laravel - </span>Laravel Blog <a href="###"><small style="font-size:0.5em;color: #ffffff">--zeno</small></a></h1>
-        </div>
-        <div class="col-sm-12" style="text-align: center">
-        </div>
-    </div>
-</header>
+@include('post.title')
 <!--header end-->
 <!-- start navigation -->
 @include('post.header')

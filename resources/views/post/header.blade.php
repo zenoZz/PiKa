@@ -1,4 +1,5 @@
 <nav class="main-navigation">
+    {{--<p class="navbar-text"><strong>轻对我而言</strong></p>--}}
     <div class="container">
         <div class="row">
             <div class="col-xs-12" style="text-align: center">
