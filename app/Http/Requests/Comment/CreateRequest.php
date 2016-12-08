@@ -23,4 +23,11 @@ class CreateRequest extends Request
             'content' => 'required',
         ];
     }
+
+    public function messages()
+    {
+        return [
+            'content.required' => '请输入评论内容',
+        ];
+    }
 }
