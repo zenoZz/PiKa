@@ -37,8 +37,9 @@
             </footer>
         </article>
         @endforeach
-        <div class="col-sm-4 col-sm-offset-8" style="margin-bottom: 20px;">
 
+        <div class="text-center" style="margin-bottom: 10px;">
+            {!! $articles->appends(['title' => $title])->links() !!}
         </div>
     @else
         <article class="post tag-laravel tag-laravel-5-1 tag-xin-ban-ben-fa-bu">
@@ -47,8 +48,5 @@
             </div>
         </article>
     @endif
-    <div class="text-center" style="margin-bottom: 10px;">
-            {!! $articles->render() !!}
-        </div>
 @stop
 

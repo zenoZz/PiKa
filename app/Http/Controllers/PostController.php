@@ -18,7 +18,7 @@ class PostController extends Controller {
             $title = $request->get('title');
             $mod = $mod->where('title', 'LIKE', "%$title%");
         }
-        $articles = $mod->orderBy('updated_at', 'desc')->paginate(5);
+        $articles = $mod->orderBy('updated_at', 'desc')->paginate(3);
         return view('post.index', compact('articles', 'title'));
     }
 
