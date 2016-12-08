@@ -39,7 +39,7 @@
         @endforeach
 
         <div class="text-center" style="margin-bottom: 10px;">
-            {!! $articles->appends(['title' => $title])->links() !!}
+            {!! $articles->appends(['title' => $title])->render() !!}
         </div>
     @else
         <article class="post tag-laravel tag-laravel-5-1 tag-xin-ban-ben-fa-bu">
