@@ -7,8 +7,9 @@
             <!--内容头部-->
             <!--内容主体-->
             <div class="box-body" style="overflow-x: auto;">
-                <form class="form-horizontal cmxform" name="addRoleForm" id="form" action="/tag/update/{{ $tag->getKey() }}" method="post">
+                <form class="form-horizontal cmxform" name="addRoleForm" id="form" action="{{ route('tag.update', ['id' => $tag->getKey()]) }}" method="post">
                     {!! csrf_field() !!}
+                    <input type="hidden" name="_method" value="put">
                     <div class="box-body">
                         <div class="form-group">
                             <label for="name" class="col-sm-2 control-label">名称</label>
@@ -27,7 +28,7 @@
                         <div class="form-group">
                             <label class="col-sm-2 control-label"></label>
                             <div class="col-sm-7">
-                                <button type="submit" class="btn btn-info btn-flat">提交</button>
+                                <button type="button" class="btn btn-info btn-flat submit-form-sync">提交</button>
                             </div>
                         </div>
                     </div>
