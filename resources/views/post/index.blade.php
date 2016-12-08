@@ -43,8 +43,8 @@
         </div>
     @else
         <article class="post tag-laravel tag-laravel-5-1 tag-xin-ban-ben-fa-bu">
-            <div class="post-head">
-                <h1 class="post-title">抱歉，暂时没有相关文章</h1>
+            <div class="post-content text-center">
+               <p class="post-title">抱歉，暂时没有相关文章</p>
             </div>
         </article>
     @endif
