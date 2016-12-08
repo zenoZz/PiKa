@@ -36,7 +36,8 @@ class PostController extends Controller {
     public function getByTag($tag)
     {
         $articles= ArticleRepository::getArticlesByTag($tag);
-        return view('post.index', compact('articles'));
+        $title = '';
+        return view('post.index', compact('articles', 'title'));
     }
 
     public function postComment(CreateRequest $request)
