@@ -2,7 +2,7 @@
 @extends('post.post')
 
 @section('content')
-    @if(isset($articles) && !empty($articles))
+    @if(isset($articles) && !empty($articles) && count($articles) > 0)
         @foreach($articles as $article)
         <article id="{$val['id']}" class="post tag-laravel tag-laravel-5-1 tag-xin-ban-ben-fa-bu" style="margin-bottom:20px;">
             @if($article->is_recommend == App\Models\Article::ARTICLE_IS_RECOMMEND_YES)
