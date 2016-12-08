@@ -1,7 +1,7 @@
 <header class="container-fluid" style="margin-bottom: 0;padding-top: 10px;padding-bottom: 50px;">
     <div class="row">
         <!--标头-->
-        <div class="col-sm-5 col-sm-offset-3 text-center" style="margin-top: 30px;">
+        <div class="col-sm-12 text-center" style="margin-top: 35px;">
             {{--<input type="" class="form-control" placeholder="">--}}
             {{--<h1 style="color: #ffffff"><span class="hide">Laravel - </span>Laravel Blog <a href="###"><small style="font-size:0.5em;color: #ffffff">--zeno</small></a></h1>--}}
             {{--<form action="{{ route('post.index') }}" method="get">--}}
