@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Laravel Blog</title>
-    <meta name="description" content="Laravel blog" />
-    <meta name="keywords" content="laravel blog,laravel,laravel php">
+    <meta name="description" content="轻对我而言" />
+    <meta name="keywords" content="轻对我而言,laravel php">
     <link href="{{ asset("/pika/css/bootstrap.min.css") }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset("/pika/css/index.css") }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset("/favicon.ico") }}" rel="Shortcut Icon">

@@ -33,7 +33,7 @@
                                 {!! App\Models\Article::$IS_ONLINE_HTML[$article->on_line] !!}
                             </td>
                             <td class="col-lg-1">
-                                {{ $article->author }}
+                                {{ $article->admin->name }}
                             </td>
                             <td class="col-lg-2">
                                 {{ $article->updated_at }}

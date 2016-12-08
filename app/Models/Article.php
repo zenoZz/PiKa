@@ -79,6 +79,11 @@ class Article extends Model
         return $this->belongsToMany('App\Models\Tag', 'article_tag');
     }
 
+    public function admin()
+    {
+        return $this->hasOne('App\\Models\\User', 'id', 'user_id');
+    }
+
     /**
      * ɾ
      */
