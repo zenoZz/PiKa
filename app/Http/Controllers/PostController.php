@@ -43,11 +43,11 @@ class PostController extends Controller {
     public function postComment(CreateRequest $request)
     {
         if (!$request->has('content'))
-            return responseFail('res.comment.comment_content_null');
+            return responseF('res.comment.comment_content_null');
 
         CommentRepository::create($request->all());
 
-        return responseSuccess('res.comment.create_comment_success');
+        return responseS('res.comment.create_comment_success');
     }
 
     public function getRegister()
