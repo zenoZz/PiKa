@@ -79,26 +79,23 @@
                 <input type="hidden" name="article_id" value="{{ $article->getKey() }}"/>
                 <div class="form-group">
                     {{--<label for="email" class="col-sm-1 control-label">邮箱</label>--}}
-                    <div class="col-sm-12">
+                    <div class="col-sm-6">
                         <input type="email" class="form-control" id="email" name="email" placeholder="邮箱" value="{{ old('email') }}">
                     </div>
-                </div>
-                <div class="form-group">
-                    {{--<label for="nickname" class="col-sm-1 control-label">昵称</label>--}}
-                    <div class="col-sm-12">
+                    <div class="col-sm-6">
                         <input type="text" name="nickname" class="form-control" placeholder="昵称" value="{{ old('nickname') }}">
                     </div>
                 </div>
                 <div class="form-group">
                     {{--<label for="newFormContent" class="col-sm-1 control-label">评论</label>--}}
                     <div class="col-sm-12">
-                        <textarea name="content" id="newFormContent" class="form-control" rows="4" placeholder="评论">{{ old('content') }}</textarea>
+                        <textarea name="content" id="newFormContent" class="form-control" rows="2" placeholder="评论">{{ old('content') }}</textarea>
                     </div>
                 </div>
 
                 <div class="form-group" style="margin-top: 10px;">
                     <div class="col-sm-12">
-                        <button type="submit" class="btn btn-lg btn-danger col-lg-12">发表</button>
+                        <button type="submit" class="btn btn-lg btn-danger col-lg-12">发表评论</button>
                     </div>
                 </div>
             </form>

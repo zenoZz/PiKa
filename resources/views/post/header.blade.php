@@ -28,7 +28,6 @@
                         <ul class="dropdown-menu">
                             <li><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank">git入门</a></li>
                             <li><a href="http://www.tuicool.com/articles/bEz6Vf" target="_blank">git使用手册</a></li>
-
                         </ul>
                     </li>
                 </ul>
