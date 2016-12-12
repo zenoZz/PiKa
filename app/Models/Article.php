@@ -16,7 +16,8 @@ class Article extends Model
         'is_recommend',
         'markdown_source',
         'is_markdown',
-        'on_line'
+        'on_line',
+        'type'
     ];
 
 
@@ -60,6 +61,14 @@ class Article extends Model
     public static $IS_ONLINE_HTML = [
         self::ARTICLE_IS_ONLINE_NO => '<span style="color: red"><b>已下线</b></span>',
         self::ARTICLE_IS_ONLINE_YES => '<span style="color: green"><b>已上线</b></span>'
+    ];
+
+    const ARTICLE_TYPE_ONE = 1;
+    const ARTICLE_TYPE_TWO = 2;
+
+    public static $ARTICLE_TYPE = [
+        self::ARTICLE_TYPE_ONE => 'code',
+        self::ARTICLE_TYPE_TWO => 'word'
     ];
 
 

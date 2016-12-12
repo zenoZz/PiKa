@@ -40,6 +40,15 @@ class PostController extends Controller {
         return view('post.index', compact('articles', 'title'));
     }
 
+    public function getByType($type)
+    {
+        if (!in_array($type, array_keys(Article::$ARTICLE_TYPE)))
+            abort(404);
+        $articles = Article::where('type', $type)->orderBy('updated_at', 'desc')->paginate(5);
+        $title = '';
+        return view('post.index', compact('articles', 'title'));
+    }
+
     public function postComment(CreateRequest $request)
     {
 //        if (!$request->has('nickname'))

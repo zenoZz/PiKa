@@ -25,6 +25,12 @@
                             </div>
                         </div>
                         <div class="form-group">
+                            <label for="is_recommend" class="col-sm-2 control-label">文章类型</label>
+                            <div class="col-sm-7">
+                                {!! Form::select('type', array('' => '--请选择--')+App\Models\Article::$ARTICLE_TYPE, '', array('class' => 'form-control', 'id' => 'type', 'required' => 'true', 'title' => '请选择文章类型')) !!}
+                            </div>
+                        </div>
+                        <div class="form-group">
                             <label class="col-sm-2 control-label">标签</label>
                             <div class="col-sm-7">
                                 <select class="form-control select2" multiple="multiple" data-placeholder="选择标签" name="tags[]" style="width: 100%;">

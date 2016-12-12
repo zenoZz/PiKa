@@ -28,16 +28,21 @@ return [
                 'rules' => 'required',
                 'message' => ['required' => '请选择是否推荐']
             ],
+            'type' => [
+                'name' => '文章类型',
+                'rules' => 'required',
+                'message' => ['required' => '请选择文章类型']
+            ],
             'tags' => [
                 'name' => '标签',
                 'rules' => 'required',
                 'message' => ['required' => '请选择标签']
             ],
-//            'content' => [
-//                'name' => '标签',
-//                'rules' => 'required',
-//                'message' => []
-//            ],
+            'content' => [
+                'name' => '内容',
+                'rules' => 'required',
+                'message' => ['required' => '请填写文章内容']
+            ],
 
         ]
     ],

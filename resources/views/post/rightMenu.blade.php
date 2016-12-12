@@ -24,11 +24,19 @@
         </div>
     </div>
 
+    <div class="widget">
+        <h4 class="title">链接</h4>
+        <div class="content community">
+            <p><a target="_blank" href="https://laravel-china.org/" style="color: #f4645f"><span class="glyphicon glyphicon-link"></span></a> 中国最大laravel社区</p>
+            <p><a target="_blank" href="http://www.laruence.com/" style="color: #f4645f"><span class="glyphicon glyphicon-link"></span></a> 鸟哥博客</p>
+        </div>
+    </div>
+
     <!-- start tag cloud widget -->
     <div class="widget">
         <h4 class="title">讨饭</h4>
         <div class="content community">
-            <p>网站制作、微信开发</p>
+            <p style="color: #f4645f">网站制作、微信开发</p>
             <p><a href="javascript:void (0)" style="color: #f4645f"><span class="glyphicon glyphicon-envelope"></span></a>：77849093@qq.com</p>
             <p><a href="javascript:void (0)" style="color: #f4645f"><span class="glyphicon glyphicon-earphone"></span></a>：15827535604</p>
         </div>

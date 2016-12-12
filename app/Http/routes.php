@@ -5,6 +5,7 @@ Route::post('upload/uploadImg', 'UploadController@upload');
 
 //前台
 Route::get('by-tag/{tag}', ['as' => 'article-by-tag', 'uses' => 'PostController@getByTag']);
+Route::get('list/{type}', ['as' => 'article.list', 'uses' => 'PostController@getByType']);
 Route::resource("post", 'PostController');
 Route::post("comment/create", ['as' => 'comment.store','uses' => 'PostController@postComment']);
 
