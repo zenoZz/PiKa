@@ -27,24 +27,22 @@
         }
     </style>
 </head>
-<body style="background-image: url('{{ asset ("/pika/img/1.jpg") }}');background-repeat: no-repeat;">
+<body style="background-image: url('{{ asset ("/pika/img/1.jpg") }}')">
 <!--header start-->
 @include('post.title')
-<!--header end-->
+        <!--header end-->
 <!-- start navigation -->
 @include('post.header')
-<!-- end navigation -->
+        <!-- end navigation -->
 <!--评论提示-->
 @include('layouts.post_topInfo')
-<!--main content-->
+        <!--main content-->
 <section class="content-wrap">
     <div class="container">
         <div class="row" >
-            <main class="col-md-8 main-content">
+            <main class="col-md-12">
                 @yield('content')
             </main>
-            <!--main right-->
-            @include('post.rightMenu')
         </div><!--end row-->
     </div>
 </section>
