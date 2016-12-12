@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Laravel Blog</title>
+    <title>{{ $page_title or "轻对我而言" }}</title>
     <meta name="description" content="轻对我而言" />
     <meta name="keywords" content="轻对我而言,laravel php">
     <link href="{{ asset("/pika/css/bootstrap.min.css") }}" rel="stylesheet" type="text/css" />
