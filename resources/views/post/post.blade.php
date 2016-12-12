@@ -27,7 +27,7 @@
         }
     </style>
 </head>
-<body style="background-image: url('{{ asset ("/pika/img/1.jpg") }}');background-repeat: no-repeat;">
+<body style="background-image: url('{{ asset ("/pika/img/1.jpg") }}')">
 <!--header start-->
 @include('post.title')
 <!--header end-->
