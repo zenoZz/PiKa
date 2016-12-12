@@ -12,7 +12,7 @@
             <h1 class="post-title"><a href="">{{$article->title}}</a></h1>
             <div class="post-meta">
                 <span class="author">作者：<a href="#" style="color: #f4645f">{{$article->admin->name}}</a></span> &bull;
-                <time class="post-date"  title="{$val['updated_at']}">{{ str_limit($article->updated_at, 10, '')}}</time>
+                <time class="post-date"  title="{$val['updated_at']}">{{ str_limit($article->created_at, 10, '')}}</time>
             </div>
         </div>
         <div class="featured-media">
