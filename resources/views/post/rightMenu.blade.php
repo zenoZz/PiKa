@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="{{ asset("plugin/social-share/css/share.min.css") }}">
+<script src="{{ asset("plugin/social-share/js/social-share.min.js") }}"></script>
 <aside class="col-md-4 sidebar">
 
     {{--<div class="widget">--}}
@@ -39,6 +41,11 @@
         <div class="content tag-cloud">
             @include('layouts.tag-cloud')
         </div>
+    </div>
+
+    <div class="widget">
+        <h4 class="title">分享</h4>
+        <div class="social-share" data-disabled="google,facebook,twitter,tencent,diandian"></div>
     </div>
 
     {{--<div class="widget">--}}
