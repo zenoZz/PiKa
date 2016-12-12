@@ -20,6 +20,8 @@ class CreateRequest extends Request
     public function rules()
     {
         return [
+            'email' => 'required',
+            'nickname' => 'required',
             'content' => 'required',
         ];
     }
@@ -27,6 +29,8 @@ class CreateRequest extends Request
     public function messages()
     {
         return [
+            'email.required' => '请填写邮箱',
+            'nickname.required' => '请填写昵称',
             'content.required' => '请输入评论内容',
         ];
     }

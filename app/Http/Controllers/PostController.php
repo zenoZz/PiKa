@@ -42,8 +42,11 @@ class PostController extends Controller {
 
     public function postComment(CreateRequest $request)
     {
-        if (!$request->has('content'))
-            return responseF('res.comment.comment_content_null');
+//        if (!$request->has('nickname'))
+//            return responseF('res.comment.comment_nickname_null');
+//
+//        if (!$request->has('content'))
+//            return responseF('res.comment.comment_content_null');
 
         CommentRepository::create($request->all());
 

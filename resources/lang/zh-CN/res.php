@@ -27,7 +27,8 @@ return [
         'create_comment_success'=> '评论成功！',
         'create_comment_fail'   => '评论失败！',
         'edit_comment_success'  => '修改评论成功',
-        'comment_content_null'  => '请输入评论内容'
+        'comment_content_null'  => '请输入评论内容',
+        'comment_nickname_null' => '请输入昵称'
     ],
     'menu' => [
         'has_child_menus' => '存在子菜单，不能删除'
