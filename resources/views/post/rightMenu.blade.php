@@ -34,7 +34,7 @@
 
     <!-- start tag cloud widget -->
     <div class="widget">
-        <h4 class="title">讨饭</h4>
+        <h4 class="title">Notice</h4>
         <div class="content community">
             <p style="color: #f4645f">网站制作、微信开发</p>
             <p><a href="javascript:void (0)" style="color: #f4645f"><span class="glyphicon glyphicon-envelope"></span></a>：77849093@qq.com</p>
