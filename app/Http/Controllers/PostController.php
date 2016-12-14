@@ -44,7 +44,7 @@ class PostController extends Controller {
     {
         if (!in_array($type, array_keys(Article::$ARTICLE_TYPE)))
             abort(404);
-        $articles = Article::where('type', $type)->orderBy('updated_at', 'desc')->paginate(5);
+        $articles = Article::where('type', $type)->where('on_line', Article::ARTICLE_IS_ONLINE_YES)->orderBy('updated_at', 'desc')->paginate(5);
         $title = '';
         return view('post.index', compact('articles', 'title'));
     }
