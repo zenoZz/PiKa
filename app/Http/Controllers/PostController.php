@@ -30,7 +30,8 @@ class PostController extends Controller {
     public function show($id)
     {
         $article = ArticleRepository::find($id);
-        return view('post.article', compact('article'));
+        $page_title = $article->title;
+        return view('post.article', compact('article', 'page_title'));
     }
 
     public function getByTag($tag)
