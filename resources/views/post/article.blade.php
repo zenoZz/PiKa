@@ -82,7 +82,7 @@
                     {{--<div class="col-sm-6">--}}
                         {{--<input type="email" class="form-control" id="email" name="email" placeholder="邮箱" value="{{ old('email') }}">--}}
                     {{--</div>--}}
-                    <div class="col-sm-6">
+                    <div class="col-sm-12">
                         <input type="text" name="nickname" class="form-control" placeholder="昵称" value="{{ old('nickname') }}">
                     </div>
                 </div>
