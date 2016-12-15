@@ -51,7 +51,7 @@
                         <table class="table table-striped">
                             <colgroup>
                                 <col  />
-                                <col style="width: 10%" />
+                                <col style="width: 15%" />
                             </colgroup>
                             <tbody>
                             @foreach($article->comments as $key=> $comment)
