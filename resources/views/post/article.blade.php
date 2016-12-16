@@ -55,15 +55,17 @@
                             </colgroup>
                             <tbody>
                             @foreach($article->comments as $key=> $comment)
-                                <tr>
-                                    <td colspan="2">
-                                        <div class="nickname"><strong style="color: #3c8dbc">{{$comment->nickname}}</strong>&nbsp;&nbsp;&nbsp;{{ $comment->created_at }}<span class="pull-right">&nbsp;&nbsp;&nbsp;{{$key+1}}楼</span></div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="word-break:break-all">{{$comment->content}}</td>
-                                    <td><a href="#new" onclick="reply(this);" data-name="{{ $comment->nickname }}" style="color: #3c8dbc">回复</a></td>
-                                </tr>
+                                @if($comment->on_line == 2)
+                                    <tr>
+                                        <td colspan="2">
+                                            <div class="nickname"><strong style="color: #3c8dbc">{{$comment->nickname}}</strong>&nbsp;&nbsp;&nbsp;{{ $comment->created_at }}<span class="pull-right">&nbsp;&nbsp;&nbsp;{{$key+1}}楼</span></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="word-break:break-all">{{$comment->content}}</td>
+                                        <td><a href="#new" onclick="reply(this);" data-name="{{ $comment->nickname }}" style="color: #3c8dbc">回复</a></td>
+                                    </tr>
+                                @endif
                             @endforeach
                             </tbody>
                         </table>
