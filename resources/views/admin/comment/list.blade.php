@@ -13,17 +13,18 @@
                         <th class="col-lg-2">评论文章</th>
                         <th class="col-lg-4">评论内容</th>
                         <th class="col-lg-1">评论人</th>
+                        <th class="col-lg-1">邮箱</th>
                         <th class="col-lg-2">评论时间</th>
-                        <th class="col-lg-1">编辑</th>
-                        <th class="col-lg-1">删除</th>
+                        <th class="col-lg-1">上线/下线</th>
+                        <th class="col-lg-2">操作</th>
                     </tr>
-                    @foreach($comments as $comment)
+                    @foreach($data as $comment)
                         <tr class="row">
                             <td class="col-lg-1">
                                 {{ $comment->getKey() }}
                             </td>
                             <td class="col-lg-2">
-                                <a href="/post/article/{{ $comment->article_id }}" target="_blank">{{ $comment->article->title }}</a>
+                                <a href="{{ route('post.show', ['id' => $comment->article_id]) }}" target="_blank">{{ $comment->article->title }}</a>
                             </td>
                             <td class="col-lg-4">
                                 <span data-toggle="tooltip" data-original-title="{{ $comment->content }}">{{ str_limit($comment->content,50) }}</span>
@@ -31,21 +32,27 @@
                             <td class="col-lg-1">
                                 {{ $comment->nickname }}
                             </td>
+                            <td class="col-lg-1">
+                                {{ $comment->email }}
+                            </td>
                             <td class="col-lg-2">
                                 {{ $comment->created_at }}
                             </td>
                             <td class="col-lg-1">
-                                <a href="/comment/edit/{{ $comment->getKey() }}"><i class="fa fa-fw fa-pencil" data-toggle="tooltip" data-original-title="修改"></i></a>
+                                {!! App\Models\Article::$IS_ONLINE_HTML[$comment->on_line] !!}
                             </td>
-
-                            <td class="col-lg-1">
-                                <a href="/comment/delete/{{ $comment->getKey() }}" id="del" onclick="return confirm('确定删除吗？')" rel="{{ $comment->comment_id }}"><i class="fa fa-fw fa-remove" data-toggle="tooltip" data-original-title="删除"></i></a>
+                            <td class="col-lg-2">
+                                @if($comment->on_line == 1)
+                                    <a href="{{ route('comment.check', ['id' => $comment->getKey(), 'status' => 2]) }}" class="btn btn-success btn-flat btn-xs" onclick="return confirm('确定让该评论上线吗？')">审核上线</a>
+                                @elseif($comment->on_line == 2)
+                                    <a href="{{ route('comment.check', ['id' => $comment->getKey(), 'status' => 1]) }}"  class="btn btn-danger btn-flat btn-xs" onclick="return confirm('确定下线该评论吗？')">下线产品</a>
+                                @endif
                             </td>
                         </tr>
                     @endforeach
                 </table>
                 <div class="pull-right" style="margin: 0;">
-                    {!! $comments->render() !!}
+                    {!! $data->render() !!}
                 </div>
             </div><!-- /.box-body -->
             <!--内容尾部-->

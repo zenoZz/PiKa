@@ -1,8 +1,10 @@
-<?php namespace App\Http\Controllers;
+<?php namespace App\Http\Controllers\Admin;
 
 use App\Article;
+use App\Http\Controllers\Controller;
 use App\Http\Requests\Comment\CreateRequest;
 use App\Http\Requests\Comment\UpdateRequest;
+use App\Models\Comment;
 use Illuminate\Http\Request;
 use App\Facades\CommentRepository;
 class CommentController extends Controller {
@@ -50,6 +52,19 @@ class CommentController extends Controller {
 	public function show($id)
 	{
 		//
+	}
+
+	public function check($id, $status)
+	{
+		if (!in_array($status, array_keys(Comment::$COMMENT_SHOW)))
+			return responseF('审核状态参数不对请刷新页面重试');
+
+		$mod = Comment::findOrFail($id);
+		$mod->update([
+			'on_line' => $status
+		]);
+
+		return responseS();
 	}
 
 	/**

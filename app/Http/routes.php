@@ -47,5 +47,8 @@ Route::group(['namespace' => 'Admin','middleware' => ['auth', 'authorize']], fun
     Route::get('article/check/{id}/{status}', ['as' => 'article.check', 'uses' => 'ArticleController@check']);
     Route::resource("article", 'ArticleController');
     Route::resource("tag", 'TagController');
+    Route::resource("comment", 'CommentController');
+    Route::get('comment/check/{id}/{status}', ['as' => 'comment.check', 'uses' => 'CommentController@check']);
+
 });
 

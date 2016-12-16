@@ -55,6 +55,7 @@ class CreateArticlesTable extends Migration
             $table->string('email', 255);
             $table->text('content');
             $table->integer('article_id');
+            $table->tinyInteger('on_line')->default(2)->comment('1下线 2上线');
             $table->timestamps();
         });
     }
