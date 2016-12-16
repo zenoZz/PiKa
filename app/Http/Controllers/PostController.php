@@ -6,6 +6,7 @@ use App\Facades\ArticleRepository;
 use App\Facades\CommentRepository;
 use EndaEditor;
 use App\Http\Requests\Comment\CreateRequest;
+use Mail;
 class PostController extends Controller {
 
 
@@ -60,6 +61,11 @@ class PostController extends Controller {
 
         CommentRepository::create($request->all());
 
+        $data = ['email'=>'77849093@qq.com', 'name'=>'zz'];
+        Mail::send('email.activemail', $data, function($message) use($data)
+        {
+            $message->to($data['email'], $data['name'])->subject('有新的评论');
+        });
         return responseS('res.comment.create_comment_success');
     }
 
