@@ -1,12 +1,14 @@
 <?php namespace App\Http\Controllers;
 
 use App\Models\Article;
+use App\Models\Comment;
 use Illuminate\Http\Request;
 use App\Facades\ArticleRepository;
 use App\Facades\CommentRepository;
 use EndaEditor;
 use App\Http\Requests\Comment\CreateRequest;
 use App\Jobs\SendAdminEmail;
+use App\Jobs\SendVisitorEmail;
 class PostController extends Controller {
 
 
@@ -56,7 +58,23 @@ class PostController extends Controller {
         $input = $request->all();
         $article = Article::findOrFail($input['article_id']);
         CommentRepository::create($input);
-        //发送邮件给
+        //发送邮件给评论的人员
+        $visitor_email_list = Comment::where('article_id', $article->id)->lists('email')->toArray();
+        //dd($visitor_email_list);exit;
+        foreach($visitor_email_list as $email)
+        {
+            if ($email && ($email != $input['email']))
+            {
+                $item_arr = [
+                    'email'=>$email,
+                    'url' => route('post.show', ['id' => $article->getKey()]),
+                    'nickname' => $input['nickname'],
+                    'title' => $article->title
+                ];
+                $this->dispatch(new SendVisitorEmail($item_arr));
+
+            }
+        }
 
         //发送邮件给管理员
         $data = [
