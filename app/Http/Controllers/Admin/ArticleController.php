@@ -23,7 +23,7 @@ class ArticleController extends BaseController{
             $title = $request->get('title');
             $mod = $mod->where('title', 'LIKE', "%$title%");
         }
-        $articles = $mod->where('on_line', Article::ARTICLE_IS_ONLINE_YES)->orderBy('sort', 'asc')->orderBy('updated_at', 'desc')->paginate(config('repository.page-limit'));
+        $articles = $mod->orderBy('sort', 'asc')->orderBy('updated_at', 'desc')->paginate(config('repository.page-limit'));
         return view('admin.article.list', compact('articles'));
     }
 
