@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ $page_title or "轻对我而言" }}</title>
     <meta name="description" content="轻对我而言" />
-    <meta name="keywords" content="轻对我而言,laravel php">
+    <meta name="keywords" content="轻对我而言,laravel php,{{ isset($page_title)?$page_title:'' }}">
     <link href="{{ asset("/pika/css/bootstrap.min.css") }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset("/pika/css/index.css") }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset("/favicon.ico") }}" rel="Shortcut Icon">
