@@ -29,6 +29,8 @@ class CreateArticlesTable extends Migration
             $table->unsignedInteger('views_count')->default(0)->comment('浏览总数');
             $table->unsignedInteger('comment_count')->default(0)->comment('评论总数');
 
+            $table->tinyInteger('sort')->default(1)->comment('排序');
+
             $table->timestamps();
         });
 

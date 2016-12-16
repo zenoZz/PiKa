@@ -8,7 +8,8 @@ class Article extends Model
 {
     //
 
-    protected $fillable = ['content',
+    protected $fillable = [
+        'content',
         'article_type',
         'title',
         'author',
@@ -19,7 +20,8 @@ class Article extends Model
         'on_line',
         'type',
         'views_count',
-        'comment_count'
+        'comment_count',
+        'sort'
     ];
 
 

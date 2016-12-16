@@ -16,7 +16,14 @@ class ArticleController extends BaseController{
      */
     public function index(Request $request)
     {
-        $articles = ArticleRepository::paginate(config('repository.page-limit'));
+        $title = '';
+        $mod = new Article();
+        if ($request->has('title'))
+        {
+            $title = $request->get('title');
+            $mod = $mod->where('title', 'LIKE', "%$title%");
+        }
+        $articles = $mod->where('on_line', Article::ARTICLE_IS_ONLINE_YES)->orderBy('sort', 'asc')->orderBy('updated_at', 'desc')->paginate(config('repository.page-limit'));
         return view('admin.article.list', compact('articles'));
     }
 

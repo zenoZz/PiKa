@@ -31,6 +31,12 @@
                             </div>
                         </div>
                         <div class="form-group">
+                            <label for="title" class="col-sm-2 control-label">排序</label>
+                            <div class="col-sm-7">
+                                <input type="number" min="1" class="form-control" id="sort" name="sort" value="1" required />
+                            </div>
+                        </div>
+                        <div class="form-group">
                             <label class="col-sm-2 control-label">标签</label>
                             <div class="col-sm-7">
                                 <select class="form-control select2" multiple="multiple" data-placeholder="选择标签" name="tags[]" style="width: 100%;">

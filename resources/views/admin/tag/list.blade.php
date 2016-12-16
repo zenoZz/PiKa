@@ -28,8 +28,8 @@
                                 {{ $item->updated_at }}
                             </td>
                             <td>
-                                <a href="{{ route('tag.edit', ['id' => $item->getKey()]) }}" class="btn btn-primary btn-flat">修改</a> |
-                                <button class="btn btn-danger btn-flat"
+                                <a href="{{ route('tag.edit', ['id' => $item->getKey()]) }}" class="btn btn-primary btn-flat btn-xs">修改</a> |
+                                <button class="btn btn-danger btn-flat btn-xs"
                                         data-url="{{route('tag.destroy', ['id' => $item->getKey()])}}"
                                         data-toggle="modal"
                                         data-target="#delete-modal"

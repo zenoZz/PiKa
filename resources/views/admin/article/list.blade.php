@@ -14,6 +14,7 @@
                             <th class="col-lg-2">标签</th>
                             <th class="col-lg-1">上线状态</th>
                             <th class="col-lg-1">作者</th>
+                            <th class="col-lg-1">排序</th>
                             <th class="col-lg-2">最后更新时间</th>
                             <th class="col-lg-2">操作</th>
                         </tr>
@@ -34,6 +35,9 @@
                             </td>
                             <td class="col-lg-1">
                                 {{ $article->admin->name }}
+                            </td>
+                            <td class="col-lg-1">
+                                {{ $article->sort }}
                             </td>
                             <td class="col-lg-2">
                                 {{ $article->updated_at }}
