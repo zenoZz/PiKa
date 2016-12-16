@@ -1,6 +1,6 @@
 <?php namespace App\Http\Controllers\Admin;
 
-use App\Article;
+use App\Models\Article;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Comment\CreateRequest;
 use App\Http\Requests\Comment\UpdateRequest;
@@ -56,7 +56,7 @@ class CommentController extends Controller {
 
 	public function check($id, $status)
 	{
-		if (!in_array($status, array_keys(Comment::$COMMENT_SHOW)))
+		if (!in_array($status, array_keys(Article::$IS_ONLINE)))
 			return responseF('审核状态参数不对请刷新页面重试');
 
 		$mod = Comment::findOrFail($id);
