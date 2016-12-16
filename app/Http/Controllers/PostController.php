@@ -6,7 +6,7 @@ use App\Facades\ArticleRepository;
 use App\Facades\CommentRepository;
 use EndaEditor;
 use App\Http\Requests\Comment\CreateRequest;
-use App\Jobs\SendEmail;
+use App\Jobs\SendAdminEmail;
 class PostController extends Controller {
 
 
@@ -65,7 +65,7 @@ class PostController extends Controller {
             'nickname' => $input['nickname'],
             'title' => $article->title
         ];
-        $this->dispatch(new SendEmail($data));
+        $this->dispatch(new SendAdminEmail($data));
         return responseS('res.comment.create_comment_success');
     }
 

@@ -2,40 +2,37 @@
 
 namespace App\Jobs;
 
-use App\User;
 use App\Jobs\Job;
-use Illuminate\Contracts\Mail\Mailer;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Bus\SelfHandling;
 use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Contracts\Mail\Mailer;
 
-class SendEmail extends Job implements SelfHandling, ShouldQueue
+class SendAdminEmail extends Job implements SelfHandling, ShouldQueue
 {
     use InteractsWithQueue, SerializesModels;
 
-    protected $user;
     protected $data = [];
-
     /**
-     * 创建一个新的任务实例。
+     * Create a new job instance.
      *
-     * @param  User  $user
      * @return void
      */
     public function __construct($data)
     {
+        //
         $this->data = $data;
     }
 
     /**
-     * 运行任务。
+     * Execute the job.
      *
-     * @param  Mailer  $mailer
      * @return void
      */
     public function handle(Mailer $mailer)
     {
+        //
         $data = $this->data;
         $mailer->send('email.activemail', $data, function($message) use($data)
         {
