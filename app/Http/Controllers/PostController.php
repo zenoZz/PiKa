@@ -53,11 +53,11 @@ class PostController extends Controller {
 
     public function postComment(CreateRequest $request)
     {
-        $data = $request->all();
-        $article = Article::findOrFail($data['article_id']);
-        CommentRepository::create($data);
+        $input = $request->all();
+        $article = Article::findOrFail($input['article_id']);
+        CommentRepository::create($input);
 
-        $data = ['email'=>'77849093@qq.com', 'name'=>'zz', 'url' => route('post.show', ['id' => $article->getKey()])];
+        $data = ['email'=>'77849093@qq.com', 'name'=>'zz', 'url' => route('post.show', ['id' => $article->getKey()]), 'nickname' => $input['nickname']];
         Mail::send('email.activemail', $data, function($message) use($data, $article)
         {
             $title = $data['nickname'].'对文章 '.$article->title.'有新的评论';
