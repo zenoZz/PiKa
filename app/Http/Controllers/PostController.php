@@ -33,6 +33,9 @@ class PostController extends Controller {
     public function show($id)
     {
         $article = ArticleRepository::find($id);
+        $article->update([
+            'views_count' => $article->views_count + 1
+        ]);
         $page_title = $article->title;
         return view('post.article', compact('article', 'page_title'));
     }
@@ -58,6 +61,9 @@ class PostController extends Controller {
         $input = $request->all();
         $article = Article::findOrFail($input['article_id']);
         CommentRepository::create($input);
+        $article->update([
+            'comment_count' => $article->comment_count + 1
+        ]);
         //发送邮件给评论的人员
         $visitor_email_list = Comment::where('article_id', $article->id)->lists('email')->toArray();
         //dd($visitor_email_list);exit;

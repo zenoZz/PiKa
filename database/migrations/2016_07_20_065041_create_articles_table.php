@@ -26,6 +26,9 @@ class CreateArticlesTable extends Migration
             $table->tinyInteger('type')->default(1)->comment('1code 2word');
             $table->tinyInteger('on_line')->default(1)->comment('1下线 2上线');
 
+            $table->unsignedInteger('views_count')->default(0)->comment('浏览总数');
+            $table->unsignedInteger('comment_count')->default(0)->comment('评论总数');
+
             $table->timestamps();
         });
 

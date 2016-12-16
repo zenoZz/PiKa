@@ -14,7 +14,9 @@
                 <h1 class="post-title"><a href="{{ route('post.show', ['id' => $article->getKey()]) }}">{{$article->title}}</a></h1>
                 <div class="post-meta">
                     <span class="author">作者：<a target="_blank" href="http://weibo.com/2962035201/profile?topnav=1&wvr=6&is_all=1" style="color: #f4645f">{{$article->admin->name}}</a></span> &bull;
-                    <time class="post-date"  title="{$val['updated_at']}">{{ str_limit($article->created_at, 10, '')}}</time>
+                    <time class="post-date"  title="{$val['updated_at']}">{{ str_limit($article->created_at, 10, '')}}</time> |
+                    <span class="author">浏览：{{ $article->views_count }}</span> &bull;
+                    <span class="author">评论：{{ $article->comment_count }}</span>
                 </div>
             </div>
             <div class="featured-media">

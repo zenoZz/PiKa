@@ -101,7 +101,14 @@ class CommentController extends Controller {
      */
     public function destroy($id)
     {
+		$comment = CommentRepository::find($id);
+
         CommentRepository::destroy($id);
+
+		$article = $comment->article();
+		$article->update([
+			'comment_count' => $article->comment_count - 1
+		]);
 
         return responseS();
     }

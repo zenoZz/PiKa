@@ -367,20 +367,59 @@ class MenusTableSeeder extends Seeder
                 'created_at' => '2016-06-24 17:21:24',
                 'updated_at' => '2016-06-24 17:21:24',
             ),
-            28 =>
+            34 =>
                 [
-                    'id' => 57,
-                    'parent_id' => 24,
-                    'icon' => 'fa fa-book',
-                    'name' => '文章管理',
-                    'route' => 'article',
-                    'description' => '文章管理',
-                    'sort' => 65,
+                    'id' => 63,
+                    'parent_id' => 0,
+                    'icon' => 'fa fa-list',
+                    'name' => '发布管理',
+                    'route' => 'post',
+                    'description' => '发布管理',
+                    'sort' => 99,
                     'hide' => 0,
                     'created_at' => '2016-06-24 17:21:24',
                     'updated_at' => '2016-06-24 17:21:24',
                 ],
-            29 =>
+            35 =>
+                [
+                    'id' => 64,
+                    'parent_id' => 63,
+                    'icon' => 'fa fa-list',
+                    'name' => '评论管理',
+                    'route' => 'comment',
+                    'description' => '评论管理',
+                    'sort' => 3,
+                    'hide' => 0,
+                    'created_at' => '2016-06-24 17:21:24',
+                    'updated_at' => '2016-06-24 17:21:24',
+                ],
+            36 =>
+                [
+                    'id' => 65,
+                    'parent_id' => 64,
+                    'icon' => 'fa fa-list',
+                    'name' => '评论列表',
+                    'route' => 'comment.index',
+                    'description' => '评论列表',
+                    'sort' => 99,
+                    'hide' => 0,
+                    'created_at' => '2016-06-24 17:21:24',
+                    'updated_at' => '2016-06-24 17:21:24',
+                ],
+            37 =>
+                [
+                    'id' => 57,
+                    'parent_id' => 63,
+                    'icon' => 'fa fa-book',
+                    'name' => '文章管理',
+                    'route' => 'article',
+                    'description' => '文章管理',
+                    'sort' => 2,
+                    'hide' => 0,
+                    'created_at' => '2016-06-24 17:21:24',
+                    'updated_at' => '2016-06-24 17:21:24',
+                ],
+            38 =>
                 [
                     'id' => 58,
                     'parent_id' => 57,
@@ -388,13 +427,12 @@ class MenusTableSeeder extends Seeder
                     'name' => '文章列表',
                     'route' => 'article.index',
                     'description' => '文章列表',
-                    'sort' => 66,
+                    'sort' => 0,
                     'hide' => 0,
                     'created_at' => '2016-06-24 17:21:24',
                     'updated_at' => '2016-06-24 17:21:24',
                 ],
-            30 =>
-                [
+            39 => [
                     'id' => 59,
                     'parent_id' => 57,
                     'icon' => 'fa fa-plus',
@@ -405,20 +443,19 @@ class MenusTableSeeder extends Seeder
                     'hide' => 0,
                     'created_at' => '2016-06-24 17:21:24',
                     'updated_at' => '2016-06-24 17:21:24',
-                ],
-            31 =>
-                [
-                    'id' => 60,
-                    'parent_id' => 24,
-                    'icon' => 'fa fa-tags',
-                    'name' => '标签管理',
-                    'route' => 'tag',
-                    'description' => '标签管理',
-                    'sort' => 68,
-                    'hide' => 0,
-                    'created_at' => '2016-06-24 17:21:24',
-                    'updated_at' => '2016-06-24 17:21:24',
-                ],
+            ],
+            40 => [
+                'id' => 60,
+                'parent_id' => 63,
+                'icon' => 'fa fa-tags',
+                'name' => '标签管理',
+                'route' => 'tag',
+                'description' => '标签管理',
+                'sort' => 1,
+                'hide' => 0,
+                'created_at' => '2016-06-24 17:21:24',
+                'updated_at' => '2016-06-24 17:21:24',
+            ],
             32 =>
                 [
                     'id' => 61,

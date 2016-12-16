@@ -17,7 +17,9 @@ class Article extends Model
         'markdown_source',
         'is_markdown',
         'on_line',
-        'type'
+        'type',
+        'views_count',
+        'comment_count'
     ];
 
 
