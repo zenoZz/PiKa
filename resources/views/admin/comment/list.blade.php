@@ -11,7 +11,7 @@
                     <tr class="row">
                         <th class="col-lg-1">ID</th>
                         <th class="col-lg-2">评论文章</th>
-                        <th class="col-lg-4">评论内容</th>
+                        <th>评论内容</th>
                         <th class="col-lg-1">评论人</th>
                         <th class="col-lg-1">邮箱</th>
                         <th class="col-lg-2">评论时间</th>
@@ -26,7 +26,7 @@
                             <td class="col-lg-2">
                                 <a href="{{ route('post.show', ['id' => $comment->article_id]) }}" target="_blank">{{ $comment->article->title }}</a>
                             </td>
-                            <td class="col-lg-4">
+                            <td>
                                 <span data-toggle="tooltip" data-original-title="{{ $comment->content }}">{{ str_limit($comment->content,50) }}</span>
                             </td>
                             <td class="col-lg-1">
@@ -47,6 +47,13 @@
                                 @elseif($comment->on_line == 2)
                                     <a href="{{ route('comment.check', ['id' => $comment->getKey(), 'status' => 1]) }}"  class="btn btn-danger btn-flat btn-xs" onclick="return confirm('确定下线该评论吗？')">下线产品</a>
                                 @endif
+                                    <button class="btn btn-danger btn-flat btn-xs"
+                                            data-url="{{route('comment.destroy', ['id' => $comment->getKey()])}}"
+                                            data-toggle="modal"
+                                            data-target="#delete-modal"
+                                    >
+                                        删除
+                                    </button>
                             </td>
                         </tr>
                     @endforeach
@@ -71,4 +78,7 @@
             $("#commentSearchForm select").val('');
         }
     </script>
+@endsection
+@section("after.js")
+    @include('admin.layout.delete',['title'=>'操作提示','content'=>'你确定要删除这个评论吗?'])
 @endsection

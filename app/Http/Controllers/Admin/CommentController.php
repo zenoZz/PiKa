@@ -99,11 +99,11 @@ class CommentController extends Controller {
      * @param  int  $id
      * @return Response
      */
-    public function getDelete($id)
+    public function destroy($id)
     {
         CommentRepository::destroy($id);
 
-        return responseSuccess();
+        return responseS();
     }
 
 }
