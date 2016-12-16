@@ -78,12 +78,11 @@
                 {!! csrf_field() !!}
                 <input type="hidden" name="article_id" value="{{ $article->getKey() }}"/>
                 <div class="form-group">
-                    {{--<label for="email" class="col-sm-1 control-label">邮箱</label>--}}
-                    {{--<div class="col-sm-6">--}}
-                        {{--<input type="email" class="form-control" id="email" name="email" placeholder="邮箱" value="{{ old('email') }}">--}}
-                    {{--</div>--}}
-                    <div class="col-sm-12">
+                    <div class="col-sm-6">
                         <input type="text" name="nickname" class="form-control" placeholder="昵称" value="{{ old('nickname') }}">
+                    </div>
+                    <div class="col-sm-6">
+                        <input type="email" class="form-control" id="email" name="email" placeholder="有新评论会邮件通知你（可不填）" value="{{ old('email') }}">
                     </div>
                 </div>
                 <div class="form-group">

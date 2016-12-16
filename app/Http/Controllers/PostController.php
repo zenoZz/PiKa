@@ -6,7 +6,7 @@ use App\Facades\ArticleRepository;
 use App\Facades\CommentRepository;
 use EndaEditor;
 use App\Http\Requests\Comment\CreateRequest;
-use Mail;
+use App\Jobs\SendEmail;
 class PostController extends Controller {
 
 
@@ -56,13 +56,16 @@ class PostController extends Controller {
         $input = $request->all();
         $article = Article::findOrFail($input['article_id']);
         CommentRepository::create($input);
+        //发送邮件给
 
-        $data = ['email'=>'77849093@qq.com', 'name'=>'zz', 'url' => route('post.show', ['id' => $article->getKey()]), 'nickname' => $input['nickname']];
-        Mail::send('email.activemail', $data, function($message) use($data, $article)
-        {
-            $title = $data['nickname'].'对文章 '.$article->title.'有新的评论';
-            $message->to($data['email'])->subject($title);
-        });
+        //发送邮件给管理员
+        $data = [
+            'email'=>'77849093@qq.com',
+            'url' => route('post.show', ['id' => $article->getKey()]),
+            'nickname' => $input['nickname'],
+            'title' => $article->title
+        ];
+        $this->dispatch(new SendEmail($data));
         return responseS('res.comment.create_comment_success');
     }
 
