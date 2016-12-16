@@ -53,18 +53,15 @@ class PostController extends Controller {
 
     public function postComment(CreateRequest $request)
     {
-//        if (!$request->has('nickname'))
-//            return responseF('res.comment.comment_nickname_null');
-//
-//        if (!$request->has('content'))
-//            return responseF('res.comment.comment_content_null');
+        $data = $request->all();
+        $article = Article::findOrFail($data['article_id']);
+        CommentRepository::create($data);
 
-        CommentRepository::create($request->all());
-
-        $data = ['email'=>'77849093@qq.com', 'name'=>'zz'];
-        Mail::send('email.activemail', $data, function($message) use($data)
+        $data = ['email'=>'77849093@qq.com', 'name'=>'zz', 'url' => route('post.show', ['id' => $article->getKey()])];
+        Mail::send('email.activemail', $data, function($message) use($data, $article)
         {
-            $message->to($data['email'], $data['name'])->subject('有新的评论');
+            $title = $data['nickname'].'对文章 '.$article->title.'有新的评论';
+            $message->to($data['email'], $data['name'])->subject($title);
         });
         return responseS('res.comment.create_comment_success');
     }
