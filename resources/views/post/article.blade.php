@@ -74,7 +74,7 @@
 
         </div>
         <div id="new" style="margin-top:20px;padding-bottom: 5px;padding-top: 5px;">
-            <form action="{{ route('comment.store') }}" method="POST" class="form-horizontal">
+            <form action="{{ route('post_comment.store') }}" method="POST" class="form-horizontal">
                 {!! csrf_field() !!}
                 <input type="hidden" name="article_id" value="{{ $article->getKey() }}"/>
                 <div class="form-group">
