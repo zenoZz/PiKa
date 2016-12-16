@@ -105,7 +105,7 @@ class CommentController extends Controller {
 
         CommentRepository::destroy($id);
 
-		$article = $comment->article();
+		$article = Article::findOrFail($comment->article_id);
 		$article->update([
 			'comment_count' => $article->comment_count - 1
 		]);
