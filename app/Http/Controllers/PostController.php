@@ -61,7 +61,7 @@ class PostController extends Controller {
         Mail::send('email.activemail', $data, function($message) use($data, $article)
         {
             $title = $data['nickname'].'对文章 '.$article->title.'有新的评论';
-            $message->to($data['email'], $data['name'])->subject($title);
+            $message->to($data['email'])->subject($title);
         });
         return responseS('res.comment.create_comment_success');
     }
