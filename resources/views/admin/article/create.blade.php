@@ -19,6 +19,12 @@
                             </div>
                         </div>
                         <div class="form-group">
+                            <label for="title" class="col-sm-2 control-label">作者</label>
+                            <div class="col-sm-7">
+                                <input type="text" class="form-control" id="author" name="author" placeholder="作者" required value="{{ $_user->name }}"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
                             <label for="is_recommend" class="col-sm-2 control-label">是否标为推荐</label>
                             <div class="col-sm-7">
                                 {!! Form::select('is_recommend', array('' => '--请选择--')+App\Models\Article::$ARTICLE_IS_RECOMMEND, '', array('class' => 'form-control', 'id' => 'is_recommend', 'required' => 'true', 'title' => '请选择是否推荐')) !!}

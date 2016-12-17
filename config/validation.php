@@ -23,6 +23,11 @@ return [
                 'rules' => 'required',
                 'message' => []
             ],
+            'author' => [
+                'name' => '作者名称',
+                'rules' => 'required',
+                'message' => []
+            ],
             'is_recommend' => [
                 'name' => '是否推荐',
                 'rules' => 'required',

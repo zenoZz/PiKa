@@ -63,7 +63,7 @@ class ArticleController extends BaseController{
         }
 
         $data = $request->all();
-        $data['author'] = $this->_user->name;
+        //$data['author'] = $this->_user->name;
         $data['user_id'] = $this->_user->id;
 
         $article = ArticleRepository::create($data);
