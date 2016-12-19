@@ -93,6 +93,16 @@ class PostController extends Controller {
         return responseS('res.comment.create_comment_success');
     }
 
+    public function test()
+    {
+
+        if(strpos($_SERVER['HTTP_ACCEPT'],'wap')!==false)
+        {
+            echo '手机';exit;
+        }
+        echo 'PC';
+    }
+
     public function getRegister()
     {
         return view('post.register');
