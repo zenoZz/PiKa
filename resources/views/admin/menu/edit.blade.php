@@ -65,7 +65,7 @@
                         <div class="form-group">
                             <label class="col-sm-2 control-label"></label>
                             <div class="col-sm-7">
-                                <button type="submit" class="btn btn-info btn-flat">提交</button>
+                                <button type="button" class="btn btn-info btn-flat submit-form-sync">提交</button>
                             </div>
                         </div>
                     </div>

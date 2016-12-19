@@ -46,7 +46,7 @@
                         <div class="form-group">
                             <label class="col-sm-2 control-label"></label>
                             <div class="col-sm-7">
-                                <button type="submit" class="btn btn-info btn-flat">添加</button>
+                                <button type="button" class="btn btn-info btn-flat submit-form-sync">添加</button>
                             </div>
                         </div>
                     </div>

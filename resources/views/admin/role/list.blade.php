@@ -26,9 +26,9 @@
                                     {{ $item->description }}
                             </td>
                             <td>
-                                <a href="{{ route('role.edit', ['id' => $item->getKey()]) }}" class="btn btn-primary btn-flat">修改</a> |
-                                <a href="{{ route('role.edit.permission', ['id' => $item->getKey()]) }}" class="btn btn-info btn-flat">赋权</a> |
-                                <button class="btn btn-danger btn-flat"
+                                <a href="{{ route('role.edit', ['id' => $item->getKey()]) }}" class="btn btn-primary btn-flat btn-xs">修改</a> |
+                                <a href="{{ route('role.edit.permission', ['id' => $item->getKey()]) }}" class="btn btn-info btn-flat btn-xs">赋权</a> |
+                                <button class="btn btn-danger btn-flat btn-xs"
                                         data-url="{{route('role.destroy', ['id' => $item->getKey()])}}"
                                         data-toggle="modal"
                                         data-target="#delete-modal"

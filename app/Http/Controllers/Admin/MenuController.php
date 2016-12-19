@@ -3,10 +3,11 @@
 use Illuminate\Http\Request;
 use App\Facades\MenuRepository;
 use App\Http\Controllers\Controller;
+use App\Traits\ValidationTrait;
 class MenuController extends Controller {
 
 
-
+    use ValidationTrait;
     /**
      * Display a listing of the resource.
      *
@@ -38,10 +39,16 @@ class MenuController extends Controller {
      */
     public function store(Request $request)
     {
+        $validator = $this->verify($request, 'menu.store');
+        if ($validator->fails())
+        {
+            $messages = $validator->messages()->toArray();
+            return responseWrong($messages);
+        }
 
         MenuRepository::create($request->all());
 
-        return responseSuccess('', route('menu.index'));
+        return responseSuccess('','', route('menu.index'));
     }
 
 
@@ -67,9 +74,16 @@ class MenuController extends Controller {
      */
     public function update(Request $request, $id)
     {
+        $validator = $this->verify($request, 'menu.store');
+        if ($validator->fails())
+        {
+            $messages = $validator->messages()->toArray();
+            return responseWrong($messages);
+        }
+
         MenuRepository::updateById($id, $request->all());
 
-        return responseSuccess('res.update_success', route('menu.index'));
+        return responseSuccess('res.update_success', '', route('menu.index'));
     }
 
     /**

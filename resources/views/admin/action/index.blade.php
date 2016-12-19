@@ -38,8 +38,8 @@
                                     @if($action->state == 0)<span style="color: red">禁用</span>@else<span style="color: green">启用</span>@endif
                             </td>
                             <td class="col-lg-1">
-                                <a href="{{ route('action.edit', ['id' => $action->getKey()]) }}" class="btn btn-primary btn-flat">修改</a> |
-                                <button class="btn btn-danger btn-flat"
+                                <a href="{{ route('action.edit', ['id' => $action->getKey()]) }}" class="btn btn-primary btn-flat btn-xs">修改</a> |
+                                <button class="btn btn-danger btn-flat btn-xs"
                                         data-url="{{route('action.destroy', ['id' => $action->getKey()])}}"
                                         data-toggle="modal"
                                         data-target="#delete-modal"

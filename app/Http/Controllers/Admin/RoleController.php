@@ -8,9 +8,11 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests;
 use App\Role;
+use App\Traits\ValidationTrait;
 class RoleController extends Controller
 {
 
+    use ValidationTrait;
     public function index()
     {
         $data = RoleRepository::paginate(config('repository.page-limit'));
@@ -32,11 +34,18 @@ class RoleController extends Controller
 
     public function store(Request $request)
     {
+        $validator = $this->verify($request, 'role.store');
+        if ($validator->fails())
+        {
+            $messages = $validator->messages()->toArray();
+            return responseWrong($messages);
+        }
+
         $role =  RoleRepository::create($request->all());
 
         $role->perms()->sync($request->get('permissions'));
 
-        return responseSuccess('', route('role.index'));
+        return responseSuccess('','', route('role.index'));
     }
 
     /**
@@ -63,9 +72,16 @@ class RoleController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $validator = $this->verify($request, 'role.update');
+        if ($validator->fails())
+        {
+            $messages = $validator->messages()->toArray();
+            return responseWrong($messages);
+        }
+
         RoleRepository::updateById($id, $request->all());
 
-        return responseSuccess('', route('role.index'));
+        return responseSuccess('','', route('role.index'));
     }
 
     /**
