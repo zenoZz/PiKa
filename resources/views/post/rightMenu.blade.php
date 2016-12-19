@@ -30,7 +30,7 @@
         <div class="content community">
             <p style="color: #f4645f">网站制作、微信开发</p>
             <p><a href="javascript:void (0)" style="color: #f4645f"><span class="glyphicon glyphicon-envelope"></span></a>：77849093@qq.com</p>
-            <p><a href="javascript:void (0)" style="color: #f4645f"><span class="glyphicon glyphicon-earphone"></span></a>：15827535604</p>
+            <p><a href="javascript:void (0)" style="color: #f4645f"><span class="glyphicon glyphicon-earphone"></span></a>：<a href="tel:15827535604">15827535604</a></p>
         </div>
     </div>
 
