@@ -65,22 +65,22 @@ class PostController extends Controller {
             'comment_count' => $article->comment_count + 1
         ]);
         //发送邮件给评论的人员
-        $visitor_email_list = Comment::where('article_id', $article->id)->lists('email')->toArray();
-        //dd($visitor_email_list);exit;
-        foreach($visitor_email_list as $email)
-        {
-            if ($email && ($email != $input['email']))
-            {
-                $item_arr = [
-                    'email'=>$email,
-                    'url' => route('post.show', ['id' => $article->getKey()]),
-                    'nickname' => $input['nickname'],
-                    'title' => $article->title
-                ];
-                $this->dispatch(new SendVisitorEmail($item_arr));
-
-            }
-        }
+//        $visitor_email_list = Comment::where('article_id', $article->id)->lists('email')->toArray();
+//        //dd($visitor_email_list);exit;
+//        foreach($visitor_email_list as $email)
+//        {
+//            if ($email && ($email != $input['email']))
+//            {
+//                $item_arr = [
+//                    'email'=>$email,
+//                    'url' => route('post.show', ['id' => $article->getKey()]),
+//                    'nickname' => $input['nickname'],
+//                    'title' => $article->title
+//                ];
+//                $this->dispatch(new SendVisitorEmail($item_arr));
+//
+//            }
+//        }
 
         //发送邮件给管理员
         $data = [
